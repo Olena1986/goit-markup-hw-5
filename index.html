@@ -23,9 +23,9 @@
             <nav class="header-navigation">
                 <a href="./index.html" class="logo">WEB<span class="logo-studio">STUDIO</span></a>
                 <ul class="site-nav header-list">
-                    <li><a href="./index.html" class="link current">Studio</a></li>
-                    <li><a href="./portfolio.html" class="link">Portfolio</a></li>
-                    <li><a href="./index.html" class="link">Contacts</a></li>
+                    <li><a href="./index.html" class="header-link link current">Studio</a></li>
+                    <li><a href="./portfolio.html" class="header-link link">Portfolio</a></li>
+                    <li><a href="./index.html" class="header-link link">Contacts</a></li>
                 </ul>
             </nav>
 
@@ -49,7 +49,7 @@
             <div class="container hero-container">
                 <h1 class="hero-title">Effective Solutions
                     for Your Business</h1>
-                <button type="button" class="button main-button">Order Service</button>
+                <button type="button" class="button main-button" data-modal-open>Order Service</button>
             </div>
         </section>
 
@@ -322,6 +322,12 @@
         </div>
 
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-btn-close" data-modal-close>x</button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
