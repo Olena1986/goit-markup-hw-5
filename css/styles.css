@@ -21,6 +21,9 @@
   --footer-social-icon-hover: #31d0aa;
   --portfolio-top-text: #f4f4fd;
   --portfolio-top-bc-color: #4d5ae5;
+  --modal-bc-color: #fcfcfc;
+  --modal-button-bc-color: #e7e9fc;
+
   --cards: 3;
   --gap: 24px;
 }
@@ -534,26 +537,39 @@ img {
   background-color: rgba(0, 0, 0, 0.05);
   height: 100%;
   width: 100%;
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
-  width: 400px;
-  min-height: 176px;
-  background-color: var(--main-heading-color);
-  border: 1px dashed #9747ff;
-  border-radius: 5px;
+  width: 408px;
+  min-height: 576px;
+  background-color: var(--modal-bc-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   padding: 30px;
 }
 .modal-btn-close {
   display: block;
   margin-left: auto;
+  width: 24px;
+  height: 24px;
+  background-color: var(--modal-button-bc-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-btn-icon {
+  fill: var(--fokus-color);
 }
 .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%) scale(0);
 }
